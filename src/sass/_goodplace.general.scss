@@ -3,10 +3,13 @@
 /* Color Map */
 /*Backgrounds */
 $basicBg: #fafafa;
+$contentBg: #fafafa;
+$guideBg: rgba(241,241,241,.5);
 
 /* Text */
 $basicLinks: #333;
 $textWhite: #fff;
+$textGrey: #595959;
 
 /* Buttons */
 $btnGreenBg: #5AC947;
@@ -26,4 +29,5 @@ a {color:$basicLinks;text-decoration:none;text-decoration:none;
 	&:hover {border-bottom:1px solid $basicLinks;}}
 
 /* Grid */
+.l-section {background:$contentBg;padding-bottom:20px;}
 .l-restrictor {margin:0 auto;max-width:$maxWidth;padding:0 1%;}

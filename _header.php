@@ -25,6 +25,7 @@
         	<div class="header-logo">
         		<a href="index.html"><img src="src/img/header-logo.jpg" alt="good place"></a>
         	</div>
+          <div class="header-description">На этом сайте вы сможете найти жилье для аренды на территории <strong>АР Крым</strong></div>
         	<div class="header-newad"><a href="newad.html" class="header-newad_link">Подать объявление</a></div>
         	<div class="header-login">
         		<a href="login.html" class="header-login_link">Вход</a>
