@@ -112,6 +112,7 @@ hr {
 /*Backgrounds */
 /* Text */
 /* Buttons */
+/* Borders */
 /* Size Map */
 /* Fonts */
 @font-face {
@@ -252,10 +253,14 @@ a {
     width: 70%; } }
 
 /* Home */
-.home-tip {
+.home-tip,
+.home-tip-mobile {
   font-size: 32px;
   text-align: center;
   padding-top: 10px; }
+
+.home-tip-mobile {
+  display: none; }
 
 .home-guide {
   background: rgba(241, 241, 241, 0.5);
@@ -308,9 +313,67 @@ a {
   height: 20px;
   width: 20px; }
 
+/* Search */
+.home-seasch-wrapper {
+  margin: 20px auto;
+  position: relative;
+  width: 40%; }
+
+.home-search {
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #c7c7c7;
+  background: rgba(241, 241, 241, 0.5);
+  display: block;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 0 20px;
+  width: 100%;
+  -webkit-transition: 100ms;
+          transition: 100ms; }
+  .home-search:focus {
+    background: rgba(241, 241, 241, 0.2);
+    border-color: #2C79CD;
+    box-shadow: 0 0 1px #2C79CD; }
+  .home-search:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease; }
+  .home-search:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.2s ease; }
+  .home-search:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.2s ease; }
+  .home-search:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.2s ease; }
+
+.home-search-btn {
+  background: #2C79CD url("../img/lupa.svg") no-repeat center;
+  background-size: 18%;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px; }
+  .home-search-btn:hover {
+    background-color: #276DB8; }
+
+.home-krim-wrapper {
+  text-align: center; }
+  .home-krim-wrapper img {
+    max-width: 100%; }
+
 @media only screen and (max-width: 1120px) {
   .home-guide {
     max-width: 100%; } }
+
+@media only screen and (max-width: 880px) {
+  .home-seasch-wrapper {
+    width: 80%; } }
 
 @media only screen and (max-width: 780px) {
   .home-guide {
@@ -318,6 +381,21 @@ a {
     padding-left: 30px; } }
 
 @media only screen and (max-width: 370px) {
+  .home-guide,
+  .home-tip {
+    display: none; }
+  .home-tip-mobile {
+    display: block; }
+  .home-seasch-wrapper {
+    width: 95%; }
   .home-guide_item {
     font-size: 15px;
     margin-bottom: -12px; } }
+
+/* Footer */
+.l-footer {
+  background: #eaeaea;
+  border-top: 1px solid #c7c7c7;
+  line-height: 22px;
+  padding: 20px 0;
+  text-align: center; }
