@@ -1,0 +1,26 @@
+/* Header */
+.l-header {border-bottom:1px solid #e7e7e7;position:relative;}
+.l-restrictor__header {display:flex;justify-content:space-between;align-items:center;min-height:94px;}
+.header-logo,
+.header-newad,
+.header-login {}
+.header-newad_link {background:$btnGreenBg;color:$textWhite;display:inline-block;font-family:"PlumbBold";line-height:43px;padding:0 41px 0 67px;position:relative;
+	&:hover {background:$btnGreenBg__hover;border-bottom:none;}
+	&:before {content:"";background: url("../img/p.svg")no-repeat center;border-right:1px solid #21BA00;box-shadow:0 1px 1px #fff;background-size:50%;height:43px;width:50px;position:absolute;left:0;top:0;}}
+.header-login_link {border-bottom:1px solid transparent;font-family:"PlumbBold";text-transform:uppercase;display:inline-block;padding-bottom:4px;position:relative;top:3px;}
+
+
+@media only screen and (max-width:620px) {
+	.l-header {padding-top:20px;}
+	.l-restrictor__header {display:block;}
+	.header-logo,
+	.header-newad {margin-bottom:20px;}
+	.header-login {position:absolute;right:16px;top:45px;}}
+
+@media only screen and (max-width:350px) {
+	.l-header {padding-top:0;}
+	.header-login {top:25px;}
+	.header-logo {
+		img {position:relative;top:7px;width:70%;}}	
+	.header-newad {text-align:center;}
+}

@@ -1,0 +1,225 @@
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  margin: 0; }
+
+input:focus, textarea:focus {
+  outline: none; }
+
+textarea {
+  resize: vertical; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle; }
+
+video {
+  display: inline-block; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+p {
+  margin: 0; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+dl, dt, dd, figure {
+  margin: 0;
+  padding: 0; }
+
+li {
+  margin: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td {
+  vertical-align: top;
+  padding: 0; }
+
+th {
+  text-align: left; }
+
+blockquote {
+  margin: 18px 40px; }
+
+pre, code, kbd, samp {
+  font-family: monospace;
+  font-size: 1em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+
+q:before {
+  content: "\"";
+  position: absolute;
+  left: -5px; }
+
+q:after {
+  content: "\""; }
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.65em; }
+
+sub {
+  bottom: -0.25em; }
+
+form {
+  margin: 0; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+label {
+  cursor: pointer; }
+
+hr {
+  display: block;
+  height: 0;
+  border: 0;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  margin: 10px 0;
+  padding: 0;
+  clear: both; }
+
+/* General */
+/* Color Map */
+/*Backgrounds */
+/* Text */
+/* Buttons */
+/* Size Map */
+/* Fonts */
+@font-face {
+  font-family: "PlumbRegular";
+  src: url("../fonts/plumb-regular.eot");
+  src: url("../fonts/plumb-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/plumb-regular.woff") format("woff"), url("../fonts/plumb-regular.ttf") format("truetype"), url("../fonts/plumb-regular.svg#PlumbRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "PlumbBold";
+  src: url("../fonts/plumbboldc.eot");
+  src: url("../fonts/plumbboldc.eot?#iefix") format("embedded-opentype"), url("../fonts/plumbboldc.woff") format("woff"), url("../fonts/plumbboldc.ttf") format("truetype"), url("../fonts/plumbboldc.svg#PlumbBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+body {
+  font-family: "PlumbRegular";
+  background: #fafafa; }
+
+a {
+  color: #333;
+  text-decoration: none;
+  text-decoration: none; }
+  a:hover {
+    border-bottom: 1px solid #333; }
+
+/* Grid */
+.l-restrictor {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0 1%; }
+
+/* Header */
+.l-header {
+  border-bottom: 1px solid #e7e7e7;
+  position: relative; }
+
+.l-restrictor__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 94px; }
+
+.header-newad_link {
+  background: #5AC947;
+  color: #fff;
+  display: inline-block;
+  font-family: "PlumbBold";
+  line-height: 43px;
+  padding: 0 41px 0 67px;
+  position: relative; }
+  .header-newad_link:hover {
+    background: #51B63F;
+    border-bottom: none; }
+  .header-newad_link:before {
+    content: "";
+    background: url("../img/p.svg") no-repeat center;
+    border-right: 1px solid #21BA00;
+    box-shadow: 0 1px 1px #fff;
+    background-size: 50%;
+    height: 43px;
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: 0; }
+
+.header-login_link {
+  border-bottom: 1px solid transparent;
+  font-family: "PlumbBold";
+  text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 4px;
+  position: relative;
+  top: 3px; }
+
+@media only screen and (max-width: 620px) {
+  .l-header {
+    padding-top: 20px; }
+  .l-restrictor__header {
+    display: block; }
+  .header-logo,
+  .header-newad {
+    margin-bottom: 20px; }
+  .header-login {
+    position: absolute;
+    right: 16px;
+    top: 45px; } }
+
+@media only screen and (max-width: 350px) {
+  .l-header {
+    padding-top: 0; }
+  .header-login {
+    top: 25px; }
+  .header-logo img {
+    position: relative;
+    top: 7px;
+    width: 70%; }
+  .header-newad {
+    text-align: center; } }
