@@ -19,6 +19,10 @@
       </script>
   	</head>
   	<body>
+
+  <?php
+    include("_modal-forms.php");
+  ?>
   		
  	<header class="l-header">
       	<div class="l-restrictor l-restrictor__header">

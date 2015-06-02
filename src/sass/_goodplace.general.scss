@@ -7,9 +7,11 @@ $contentBg: #fafafa;
 $guideBg: rgba(241,241,241,.5);
 $searchFocusBg: rgba(241,241,241,.2);
 $footerBg: #eaeaea;
+$modalBg: rgba(55,55,180,.3);
 
 /* Text */
 $basicLinks: #333;
+$blueLinks: #55a;
 $textWhite: #fff;
 $textGrey: #595959;
 
@@ -23,6 +25,7 @@ $bntBlueBg__hover: #276DB8;
 /* Borders */
 $borderGrey: #c7c7c7;
 $borderFocus: #2C79CD;
+$borderSubmitBtn: #2C79CD;
 
 
 /* Size Map */
@@ -40,3 +43,8 @@ a {color:$basicLinks;text-decoration:none;text-decoration:none;
 /* Grid */
 .l-section {background:$contentBg;padding-bottom:20px;}
 .l-restrictor {margin:0 auto;max-width:$maxWidth;padding:0 1%;}
+
+/* Inputs */
+.goodplace-input {border:1px solid $borderGrey;border-radius:5px;box-sizing:border-box;display:inline-block;font-size:22px;line-height:36px;padding:0 10px;width:100%;}
+.goodspace-submit {display:block;background:$bntBlueBg;border:1px solid $borderSubmitBtn;border-radius:3px;color:$textWhite;cursor:pointer;line-height:22px;padding:0 5px;
+	&:hover {background:$bntBlueBg__hover;}}

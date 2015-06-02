@@ -5,6 +5,7 @@
 			<div class="footer-year">2015</div>	
 		</div>
 	</footer>
-
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="dist/js/nf.handler.js"></script>
  </body>
 </html>

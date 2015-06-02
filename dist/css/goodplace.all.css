@@ -152,6 +152,29 @@ a {
   max-width: 1300px;
   padding: 0 1%; }
 
+/* Inputs */
+.goodplace-input {
+  border: 1px solid #c7c7c7;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 22px;
+  line-height: 36px;
+  padding: 0 10px;
+  width: 100%; }
+
+.goodspace-submit {
+  display: block;
+  background: #2C79CD;
+  border: 1px solid #2C79CD;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 22px;
+  padding: 0 5px; }
+  .goodspace-submit:hover {
+    background: #276DB8; }
+
 /* Header */
 .l-header {
   border-bottom: 1px solid #e7e7e7;
@@ -399,3 +422,76 @@ a {
   line-height: 22px;
   padding: 20px 0;
   text-align: center; }
+
+/* Modal Forms */
+/* Login */
+.modal {
+  display: none;
+  background: rgba(55, 55, 180, 0.3);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999; }
+
+.modal__active {
+  display: block; }
+
+.modal-content-wrapper {
+  background: #fafafa;
+  border: 1px solid #9B9B9B;
+  border-radius: 8px;
+  max-width: 40%;
+  margin: 8% auto 0;
+  padding: 10px 15px 15px; }
+
+.modal-header {
+  border-bottom: 1px solid #c7c7c7;
+  padding-bottom: 5px;
+  position: relative; }
+
+.modal-close {
+  color: #9B9B9B;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 18px; }
+  .modal-close:hover {
+    color: #111; }
+
+.modal-title {
+  font-family: "PlumbBold";
+  font-size: 22px; }
+
+.modal-tip {
+  font-size: 13px; }
+  .modal-tip a {
+    color: #55a; }
+    .modal-tip a:hover {
+      border-bottom-color: #55a; }
+
+.modal-form {
+  margin-top: 20px; }
+
+.modal-list_item:first-child {
+  margin-bottom: 12px; }
+
+.modal-label {
+  display: inline-block;
+  min-width: 70px; }
+
+.modal-input {
+  max-width: 86%; }
+
+.modal-submit {
+  display: block;
+  margin-left: auto;
+  font-size: 22px;
+  line-height: 36px;
+  padding: 0 10px; }
+
+.modal-tip-bottom {
+  margin-left: 75px;
+  margin-top: 2px; }
