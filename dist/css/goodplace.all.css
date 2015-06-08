@@ -175,6 +175,23 @@ a {
   .goodspace-submit:hover {
     background: #276DB8; }
 
+.goodplace-select {
+  cursor: pointer;
+  opacity: .7; }
+  .goodplace-select:hover {
+    opacity: 1; }
+  .goodplace-select:focus {
+    outline: none; }
+
+.goodplace-textarea {
+  border: 1px solid #c7c7c7;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: block;
+  min-height: 100px;
+  padding: 10px;
+  width: 100%; }
+
 /* Header */
 .l-header {
   border-bottom: 1px solid #e7e7e7;
@@ -208,7 +225,7 @@ a {
     border-bottom: none; }
   .header-newad_link:before {
     content: "";
-    background: url("../img/p.svg") no-repeat center;
+    background: url("../img/icon-new-ad.svg") no-repeat center;
     border-right: 1px solid #21BA00;
     box-shadow: 0 1px 1px #fff;
     background-size: 50%;
@@ -495,3 +512,84 @@ a {
 .modal-tip-bottom {
   margin-left: 75px;
   margin-top: 2px; }
+
+/* New Ad */
+.newad-form {
+  background: #D9E1F0;
+  border: 2px solid #c7c7c7;
+  border-radius: 8px;
+  box-sizing: border-box;
+  max-width: 60%;
+  margin: 15px auto 0;
+  padding: 10px 20px 10px 25px; }
+
+.newad-list_item {
+  line-height: 22px; }
+
+.newad-label {
+  font-size: 16px;
+  position: relative;
+  top: 30px; }
+
+.newad-label[required] {
+  margin-left: -11px; }
+  .newad-label[required]:before {
+    content: "* "; }
+
+.newad-content {
+  max-width: 65%;
+  margin-left: auto; }
+
+.newad-price_price {
+  margin-right: 5px;
+  max-width: 25%; }
+
+.newad-price_postfix {
+  font-size: 18px; }
+
+.newad-price_period {
+  font-size: 16px;
+  height: 38px;
+  margin-left: 10px;
+  padding-left: 10px;
+  position: relative;
+  top: -2px;
+  width: 35%; }
+
+.newad-geo_city {
+  font-size: 16px;
+  height: 38px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+  top: -2px;
+  width: 35%; }
+
+.newad-input-siblings {
+  margin-bottom: 10px; }
+  .newad-input-siblings:last-child {
+    margin-bottom: 0; }
+
+.newad-sleepplaces {
+  font-size: 16px;
+  height: 38px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+  top: -2px;
+  width: 35%; }
+
+.newad-content_label {
+  font-family: "PlumbBold"; }
+
+.newad-input-file {
+  display: block; }
+
+.newad-submit {
+  display: block;
+  font-family: "PlumbBold";
+  margin-top: 30px;
+  line-height: 38px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  padding: 0 20px; }

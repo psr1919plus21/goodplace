@@ -8,6 +8,7 @@ $guideBg: rgba(241,241,241,.5);
 $searchFocusBg: rgba(241,241,241,.2);
 $footerBg: #eaeaea;
 $modalBg: rgba(55,55,180,.3);
+$formBg: #D9E1F0;
 
 /* Text */
 $basicLinks: #333;
@@ -35,7 +36,6 @@ $maxWidth: 1300px;
 @include font-face("PlumbRegular", "plumb-regular");
 @include font-face("PlumbBold", "plumbboldc");
 
-
 body {font-family:"PlumbRegular";background:$basicBg;}
 a {color:$basicLinks;text-decoration:none;text-decoration:none;
 	&:hover {border-bottom:1px solid $basicLinks;}}
@@ -48,3 +48,7 @@ a {color:$basicLinks;text-decoration:none;text-decoration:none;
 .goodplace-input {border:1px solid $borderGrey;border-radius:5px;box-sizing:border-box;display:inline-block;font-size:22px;line-height:36px;padding:0 10px;width:100%;}
 .goodspace-submit {display:block;background:$bntBlueBg;border:1px solid $borderSubmitBtn;border-radius:3px;color:$textWhite;cursor:pointer;line-height:22px;padding:0 5px;
 	&:hover {background:$bntBlueBg__hover;}}
+.goodplace-select {cursor:pointer;opacity:.7;
+	&:hover {opacity:1;}
+	&:focus {outline:none;}}
+.goodplace-textarea {border:1px solid $borderGrey;border-radius:5px;box-sizing:border-box;display:block;min-height:100px;padding:10px;width:100%;}
