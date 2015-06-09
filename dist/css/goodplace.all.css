@@ -166,7 +166,7 @@ a {
 .goodspace-submit {
   display: block;
   background: #2C79CD;
-  border: 1px solid #2C79CD;
+  border: 1px solid #5CA7C8;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
@@ -593,3 +593,295 @@ a {
   margin-left: auto;
   margin-bottom: 10px;
   padding: 0 20px; }
+
+/* Ad page */
+.prop-wrapper {
+  border: 1px solid #c7c7c7;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-top: 20px;
+  max-width: 67%;
+  padding: 10px 15px 40px; }
+
+.prop-header {
+  position: relative;
+  padding-right: 160px; }
+
+.prop-title {
+  font-size: 28px;
+  margin-bottom: 10px; }
+
+.prop-geo {
+  font-size: 18px; }
+
+.prop-sleepplaces {
+  font-size: 18px; }
+
+.prop-rating {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 164px; }
+
+.prop-price {
+  background: #5AC947;
+  color: #fff;
+  display: inline-block;
+  font-family: "PlumbBold";
+  font-size: 22px;
+  margin: 20px 0 10px;
+  line-height: 32px;
+  padding: 0 16px; }
+
+.prop-status {
+  color: #fff;
+  float: right;
+  font-family: "PlumbBold";
+  margin-top: 10px;
+  line-height: 26px;
+  padding: 0 8px;
+  margin-right: -160px; }
+
+.prop-status__empty {
+  background: #5AC947; }
+
+.prop-status__full {
+  background: #E54A47; }
+
+/* Prop Gallery */
+.prop-gallery {
+  max-width: 100%; }
+  .prop-gallery img {
+    max-height: 360px;
+    width: 100%; }
+
+.bx-wrapper {
+  margin-bottom: 10px; }
+
+.bx-controls {
+  display: none; }
+
+#bx-pager a {
+  display: inline-block;
+  vertical-align: top;
+  height: 50px;
+  margin-bottom: 5px;
+  max-width: 100px;
+  opacity: .5;
+  -webkit-transition: opacity 150ms;
+          transition: opacity 150ms; }
+  #bx-pager a:hover {
+    border-bottom: none;
+    opacity: 1; }
+
+#bx-pager img {
+  height: 100%;
+  width: 100%; }
+
+.prop-map {
+  height: 400px;
+  width: 100%; }
+
+/* Prop Content */
+.prop-content {
+  border-top: 1px solid #c7c7c7;
+  margin-top: 28px;
+  padding-top: 20px; }
+
+.prop-content_item {
+  margin-bottom: 15px; }
+  .prop-content_item:nth-child(2) {
+    border-bottom: 1px solid #c7c7c7;
+    padding-bottom: 20px; }
+
+.prop-content_label {
+  font-size: 19px; }
+
+.prop-content_value {
+  font-size: 19px;
+  position: relative;
+  padding-left: 30px; }
+
+.prop-content_author {
+  font-size: 19px;
+  color: #595959;
+  display: inline-block; }
+
+.prop-content_phonebtn {
+  background: #3CB6E7;
+  border: 1px solid #5CA7C8;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "PlumbBold";
+  max-width: 200px;
+  text-align: center;
+  line-height: 28px;
+  padding: 0; }
+  .prop-content_phonebtn:hover {
+    background: #38A9D7; }
+  .prop-content_phonebtn:active {
+    box-shadow: 0 2px 3px #333 inset;
+    line-height: 27px;
+    padding-top: 1px; }
+
+.prop-content_phonebtn-number {
+  display: none;
+  background: #3CB6E7;
+  border: 1px solid #5CA7C8;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "PlumbBold";
+  max-width: 200px;
+  padding: 0;
+  text-align: center;
+  line-height: 28px; }
+
+.prop-content_phonetip {
+  display: none;
+  color: #EA8A0A;
+  margin-top: 5px; }
+
+.prop-content_hotwater:before {
+  content: "";
+  background: url("../img/water.svg") no-repeat center;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  width: 20px; }
+
+.prop-content_internet:before {
+  content: "";
+  background: url("../img/internet.svg") no-repeat center;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  width: 20px; }
+
+.prop-content_washmachine:before {
+  content: "";
+  background: url("../img/wash.svg") no-repeat center;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  width: 20px; }
+
+.prop-content_microwave:before {
+  content: "";
+  background: url("../img/microwave.svg") no-repeat center;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  width: 20px; }
+
+.prop-content_furniture:before {
+  content: "";
+  background: url("../img/furniture.svg") no-repeat center;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  width: 20px; }
+
+.prop-content_linens:before {
+  content: "";
+  background: url("../img/lin.svg") no-repeat center;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  width: 20px; }
+
+.prop-content_utensils:before {
+  content: "";
+  background: url("../img/utensils.svg") no-repeat center;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  width: 20px; }
+
+.prop-content_kids:before {
+  content: "";
+  background: url("../img/kids.svg") no-repeat center;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  width: 20px; }
+
+.prop-content_pets:before {
+  content: "";
+  background: url("../img/pets.svg") no-repeat center;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  width: 20px; }
+
+.prop-content_addinfo {
+  background: #fdecc5;
+  color: #252525;
+  padding: 10px;
+  line-height: 28px; }
+
+.prop-map-title {
+  border-top: 1px solid #c7c7c7;
+  font-family: "PlumbBold";
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-top: 15px; }
+
+.prop-reviews {
+  border: 1px solid #c7c7c7;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 2%;
+  padding: 10px 15px;
+  vertical-align: top;
+  width: 30%; }
+
+.prop-reviews_title {
+  font-family: "PlumbBold";
+  font-size: 24px; }
+
+@media only screen and (max-width: 800px) {
+  .prop-wrapper,
+  .prop-reviews {
+    display: block;
+    margin-left: 0;
+    min-width: 100%;
+    width: 100%; } }
+
+@media only screen and (max-width: 500px) {
+  .prop-header {
+    padding-right: 0; }
+  .prop-rating {
+    position: static;
+    margin-bottom: 15px; }
+  .prop-status {
+    margin-right: 0;
+    float: none;
+    text-align: center;
+    line-height: 32px; }
+  .prop-geo {
+    margin-top: 10px; } }
+
+@media only screen and (max-width: 400px) {
+  .prop-title {
+    font-size: 26px; }
+  .prop-map {
+    height: 300px; } }
+
+@media only screen and (max-width: 320px) {
+  .prop-title {
+    font-size: 22px; }
+  .prop-map {
+    height: 270px; } }

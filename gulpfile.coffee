@@ -7,6 +7,8 @@ autoprefixer = require("gulp-autoprefixer")
 path =
 	src:
 		coffee: "./src/coffee/*.coffee"
+		js: "./src/js/*.js"
+		css: "./src/css/*.css"
 		sass: "./src/sass/*.scss"
 		html: ['./src/html/**/*.html','!./src/html/templates/**/*.html']
 		fonts: "./src/fonts/*"
@@ -27,6 +29,14 @@ gulp.task "fonts", ->
 gulp.task "imagemin", ->
 	gulp.src(path.src.img)
 	.pipe gulp.dest path.dist.img
+
+gulp.task "js", ->
+	gulp.src(path.src.js)
+	.pipe gulp.dest path.dist.js
+
+gulp.task "css", ->
+	gulp.src(path.src.css)
+	.pipe gulp.dest path.dist.css
 	
 # gulp.task "imageminJpg", ->
 # 	gulp.src(path.src.imgJpg)
@@ -77,6 +87,6 @@ gulp.task "watch", ->
 		gulp.run "autoprefixer"
 	
 	
-gulp.task "dev", ["fonts", "imagemin", "coffee", "autoprefixer", "watch"], ->
+gulp.task "dev", ["css", "fonts", "imagemin", "coffee", "js", "autoprefixer", "watch"], ->
 
-gulp.task "default", ["fonts", "imagemin", "coffee", "autoprefixer"], ->
+gulp.task "default", ["css", "fonts", "imagemin", "coffee", "js", "autoprefixer"], ->
