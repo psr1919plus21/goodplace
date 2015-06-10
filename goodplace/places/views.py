@@ -1,21 +1,29 @@
 from django.http import HttpResponse
 from django.template import RequestContext, loader
-from .models import Question
+from .models import  Props, Photos
 
 def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
     template = loader.get_template('index.html')
     context = RequestContext(request, {
-        'latest_question_list': latest_question_list,
+        
     })
     return HttpResponse(template.render(context))
 
-def detail(request, question_id):
-    return HttpResponse("You're looking at question %s." % question_id)
+def propose(request, prop_id):
+    props = Props.objects.get(pk=prop_id)
+    propPhotos = Photos.objects.filter(photoprop=props)
+    template = loader.get_template('propose.html')
+    context = RequestContext(request, {
+        'props': props,
+        'prop_id': prop_id,
+        'propPhotos': propPhotos
+    })
+    return HttpResponse(template.render(context))
 
-def results(request, question_id):
-    response = "You're looking at the results of question %s."
-    return HttpResponse(response % question_id)
-
-def vote(request, question_id):
-    return HttpResponse("You're voting on question %s." % question_id)
+def proplist(request):
+    props = Props.objects.order_by('-pub_date')
+    template = loader.get_template('proplist.html')
+    context = RequestContext(request, {
+        'props': props
+    })
+    return HttpResponse(template.render(context))

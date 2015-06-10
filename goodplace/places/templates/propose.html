@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="no-js ie67 ie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+    <head>
+      <meta charset="utf-8" />
+      <title>Good Place</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery.rating.css" />
+      <link rel="stylesheet" href="{{ STATIC_URL }}css/goodplace.all.css" />
+      <!-- <link rel="stylesheet" href="static/css/angrycitizen.print.css" media="print"> -->
+      <!--[if IE]><link rel="stylesheet" type="text/css" href="static/css/goodplace.ie.css"><![endif]-->
+      <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico" />
+      <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+      <script>
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      </script>
+  	</head>
+  	<body>
+
+  <aside class="modal modal-lodin">
+	<div class="modal-content-wrapper">
+		<header class="modal-header">
+			<div class="modal-close">x</div>
+			<div class="modal-title">Вход</div>
+			<div class="modal-tip">войдите на сайт или <a href="#">зарегестрируйтесь</a></div>
+		</header>
+		<form class="modal-form">
+			<ul class="modal-list">
+				<li class="modal-list_item">
+					<label for="login" class="modal-label">Логин:</label>
+					<input type="text" class="goodplace-input modal-input" name="login">
+				<li class="modal-list_item">
+					<label for="password" class="modal-label">Пароль:</label>
+					<input type="password" class="goodplace-input modal-input" name="password">
+					<div class="modal-tip-bottom">
+						<a href="#">Забыли пароль?</a>
+					</div>
+				<li class="modal-list_item">
+					<input type="submit" class="goodspace-submit modal-submit" value="Войти">
+			</ul>
+		</form>
+		
+	</div>
+</aside>  		
+ 	<header class="l-header">
+      	<div class="l-restrictor l-restrictor__header">
+        	<div class="header-logo">
+        		<a href="/places"><img src="{{ STATIC_URL }}img/header-logo.jpg" alt="good place"></a>
+        	</div>
+          <div class="header-description">На этом сайте вы сможете найти жилье для аренды на территории <strong>АР Крым</strong></div>
+        	<div class="header-newad"><a href="newad.html" class="header-newad_link">Подать объявление</a></div>
+        	<div class="header-login">
+        		<a href="login.html" class="header-login_link">Вход</a>
+        	</div>
+      	</div>
+	</header>
+    <section class="l-section">
+      <div class="l-restrictor">
+        <div class="prop-wrapper">
+          <header class="prop-header">
+           
+          {% for photo in propPhotos %}
+              {{ photo.props_photourl }}
+              <div></div>
+          {% endfor %} 
+
+           
+            
+            
+            <h1 class="prop-title">{{ props.props_title }}</h1>
+            <div class="prop-rating" data-rtng="{{ props.props_rating }}"></div>
+            {% if props.props_state %}
+              <div class="prop-status prop-status__empty">Свободно</div>
+            {% else %}
+              <div class="prop-status prop-status__full">Занято</div>
+            {% endif %}
+
+
+            <div class="prop-geo">г. {{ props.props_city }} ул. {{ props.props_street }} д.{{ props.props_home }} {% if props.props_place > 0  %}кв. {{ props.props_place }} {% endif %}</div>
+            <div class="prop-sleepplaces">спальных мест: 3</div>
+            <div class="prop-price">{{ props.props_price }} руб/{{ props.props_postfix }}</div>
+            
+          </header>
+
+          <div class="prop-gallery">
+            <ul class="bxslider">
+              <li><img src="{{ STATIC_URL }}/img/1.jpg" alt="">
+              <li><img src="{{ STATIC_URL }}/img/2.jpg" alt="">
+              <li><img src="{{ STATIC_URL }}/img/3.jpg" alt="">
+              <li><img src="{{ STATIC_URL }}/img/4.jpg" alt="">
+            </ul>
+
+            <div id="bx-pager">
+              <a data-slide-index="0" href=""><img src="{{ STATIC_URL }}/img/1.jpg" alt=""></a>
+              <a data-slide-index="1" href=""><img src="{{ STATIC_URL }}/img/2.jpg" alt=""></a>
+              <a data-slide-index="2" href=""><img src="{{ STATIC_URL }}/img/3.jpg" alt=""></a>
+              <a data-slide-index="3" href=""><img src="{{ STATIC_URL }}/img/4.jpg" alt=""></a>
+            </div>
+          </div>
+
+          <div class="prop-content">
+            <ul class="prop-content_list">
+              <li class="prop-content_item">
+                <label class="prop-content_label">Автор:</label>
+                <div class="prop-content_author">{{ props.props_authorname }} {{ props.props_authorlastname }} {{ props.props_authorpatronymic }}</div>
+             
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_phonebtn">Показать номер</div>
+                <div class="prop-content_value prop-content_phonebtn-number">+7 {{ props.props_authorphone }}</div>
+                <div class="prop-content_phonetip">Пожалуйста, скажите владельцу объявления, что вы нашли его на goodspace</div>
+              
+              {% if props.props_hotwater %}
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_hotwater">Горячая вода</div>
+              {% endif %}
+              
+              {% if props.props_internet %}
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_internet">Интернет</div>
+              {% endif %}
+
+              {% if props.props_washmachine %}
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_washmachine">Стиральная машинка</div>
+              {% endif %}
+              
+              {% if props.props_microwave %}
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_microwave">СВЧ печь</div>
+              {% endif %}
+
+              {% if props.props_furniture %}
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_furniture">Мебель</div>
+              {% endif %}
+          
+              {% if props.props_linens %}
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_linens">Постельное белье</div>
+              {% endif %}
+
+              {% if props.props_utensils %}
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_utensils">Посуда</div>
+              {% endif %}
+
+              {% if props.props_kids %}
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_kids">Можно с детьми</div>
+              {% endif %}
+
+              {% if props.props_pets %}
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_pets">Можно с домашними животными</div>
+              {% endif %}
+
+              {% if props.props_addinfo %}
+              <li class="prop-content_item">
+                <div class="prop-content_value prop-content_addinfo">{{ props.props_addinfo }}</div>
+              {% endif %}
+            </ul>
+          </div>
+          
+          <div class="prop-map-wrapper">
+            <div class="prop-map-title">Объект на карте</div>
+            <div id="map" class="prop-map"></div>
+          </div>
+        
+        </div>
+
+        <div class="prop-reviews">
+            <div class="prop-reviews_title">Отзывы пользователей</div>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES * * */
+                var disqus_shortname = 'goodmfm';
+                
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div>
+        
+       
+      </div>
+    </section>
+
+
+    
+
+ 
+	<footer class="l-footer">
+		<div class="l-restrictor">
+			<div><a href="email:psr1919plus21@gmail.com" class="footer-author">psr1919plus21@gmail.com</a></div>
+			<div class="footer-year">2015</div>	
+		</div>
+	</footer>
+	<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+	<script src="{{ STATIC_URL }}js/jquery.js"></script>
+	<script src="{{ STATIC_URL }}js/jquery.bxslider.js"></script>
+	<script src="{{ STATIC_URL }}js/jquery.rating.js"></script>
+	<script src="{{ STATIC_URL }}js/goodspace.handler.js"></script>
+	<script type="text/javascript">
+		
+		$.get( "http://geocode-maps.yandex.ru/1.x/?geocode=Евпатория", function( data ) {
+			mapCenter = $(data).find("pos")[0].textContent.split(" ");
+			
+			var myMap;
+		 	ymaps.ready(init); // Ожидание загрузки API с сервера Яндекса
+		 	
+		  	function init () {
+		  		console.log(mapCenter);
+		    	myMap = new ymaps.Map("map", {
+			      center: [33.525360, 44.616649], // Координаты центра карты
+			      zoom: 10 // Zoom
+		    	});
+		  	}
+		});
+
+	  
+	</script>
+ </body>
+</html> 
