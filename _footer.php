@@ -12,8 +12,9 @@
 	<script src="dist/js/goodspace.handler.js"></script>
 	<script type="text/javascript">
 		
-		$.get( "http://geocode-maps.yandex.ru/1.x/?geocode=Евпатория", function( data ) {
-			mapCenter = $(data).find("pos")[0].textContent.split(" ");
+		$.get( "http://geocode-maps.yandex.ru/1.x/?geocode=Евпатория+Полупанова+40", function( data ) {
+			mapLabel = $(data).find("pos")[0].textContent.split(" ");
+			console.log($(data));
 			
 			var myMap;
 		 	ymaps.ready(init); // Ожидание загрузки API с сервера Яндекса
@@ -21,8 +22,8 @@
 		  	function init () {
 		  		console.log(mapCenter);
 		    	myMap = new ymaps.Map("map", {
-			      center: [33.525360, 44.616649], // Координаты центра карты
-			      zoom: 10 // Zoom
+			      center: mapLabel.reverse(), // Координаты центра карты
+			      zoom:16 // Zoom
 		    	});
 		  	}
 		});
