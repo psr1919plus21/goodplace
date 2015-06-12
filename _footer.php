@@ -13,7 +13,7 @@
 	<script type="text/javascript">
 		
 		$.get( "http://geocode-maps.yandex.ru/1.x/?geocode=Евпатория+Полупанова+40", function( data ) {
-			mapLabel = $(data).find("pos")[0].textContent.split(" ");
+			mapCenter = $(data).find("pos")[0].textContent.split(" ");
 			console.log($(data));
 			
 			var myMap;
@@ -22,7 +22,7 @@
 		  	function init () {
 		  		console.log(mapCenter);
 		    	myMap = new ymaps.Map("map", {
-			      center: mapLabel.reverse(), // Координаты центра карты
+			      center: mapCenter.reverse(), // Координаты центра карты
 			      zoom:16 // Zoom
 		    	});
 		  	}
