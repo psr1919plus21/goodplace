@@ -294,7 +294,8 @@ a {
 
 /* Home */
 .home-tip,
-.home-tip-mobile {
+.home-tip-mobile,
+.search-tip {
   font-size: 32px;
   text-align: center;
   padding-top: 10px; }
@@ -885,3 +886,6 @@ a {
     font-size: 22px; }
   .prop-map {
     height: 270px; } }
+
+.search-tip_results {
+  color: #55a; }

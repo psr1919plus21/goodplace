@@ -1,6 +1,7 @@
 /* Home */
 .home-tip,
-.home-tip-mobile {font-size:32px;text-align:center;padding-top:10px;}
+.home-tip-mobile,
+.search-tip {font-size:32px;text-align:center;padding-top:10px;}
 .home-tip-mobile {display:none;}
 .home-guide {background:$guideBg;border-radius:5px;display:flex;justify-content:space-around;line-height:42px;margin:15px auto;max-width:75%;transition:max-width 500ms;}
 .home-guide_item {color:$textGrey;font-size:18px;position:relative;}
