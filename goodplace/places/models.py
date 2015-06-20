@@ -1,4 +1,6 @@
+from django.forms.models import modelform_factory
 from django.db import models
+
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
@@ -31,7 +33,6 @@ class Props(models.Model):
     props_furniture = models.BooleanField(default=False)
     props_linens = models.BooleanField(default=False)
     props_utensils = models.BooleanField(default=False)
-    props_utensils = models.BooleanField(default=False)
     props_microwave = models.BooleanField(default=False)
     props_kids = models.BooleanField(default=False)
     props_pets = models.BooleanField(default=False)
@@ -42,5 +43,9 @@ class Photos(models.Model):
 	photoprop = models.ForeignKey(Props)
 	props_photourl = models.CharField(default="/static/img/photoplace/default.jpg", max_length=200)
 
+PropsForm = modelform_factory(Props, fields=('props_title', 'props_city', 'props_street', 'props_home', 'props_place', 'props_sleepplace', 'props_rating', 'props_state', 'props_price', 'props_postfix', 'props_authorname', 'props_authorlastname', 'props_authorpatronymic', 'props_authorphone', 'props_howater', 'props_internet', 'props_washmachine', 'props_furniture', 'props_linens', 'props_utensils', 'props_microwave', 'props_kids', 'props_pets', 'props_addinfo', 'pub_date'))
 
-
+# class PropsForm(ModelForm):
+#     class Meta:
+#         model = Props
+#         fields = ['props_title', 'props_city', 'props_street', 'props_home', 'props_place', 'props_sleepplace', 'props_rating', 'props_state', 'props_price', 'props_postfix', 'props_authorname', 'props_authorlastname', 'props_authorpatronymic', 'props_authorphone', 'props_howater', 'props_internet', 'props_washmachine', 'props_furniture', 'props_linens', 'props_utensils', 'props_microwave', 'props_kids', 'props_pets', 'props_addinfo', 'pub_date']

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="no-js ie67 ie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+    <head>
+      <meta charset="utf-8" />
+      <title>Good Place</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery.rating.css" />
+      <link rel="stylesheet" href="{{ STATIC_URL }}css/goodplace.all.css" />
+      <!-- <link rel="stylesheet" href="static/css/angrycitizen.print.css" media="print"> -->
+      <!--[if IE]><link rel="stylesheet" type="text/css" href="static/css/goodplace.ie.css"><![endif]-->
+      <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico" />
+      <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+      <script>
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      </script>
+  	</head>
+  	<body>
+
+  <aside class="modal modal-lodin">
+	<div class="modal-content-wrapper">
+		<header class="modal-header">
+			<div class="modal-close">x</div>
+			<div class="modal-title">Вход</div>
+			<div class="modal-tip">войдите на сайт или <a href="#">зарегестрируйтесь</a></div>
+		</header>
+		<form class="modal-form">
+			<ul class="modal-list">
+				<li class="modal-list_item">
+					<label for="login" class="modal-label">Логин:</label>
+					<input type="text" class="goodplace-input modal-input" name="login">
+				<li class="modal-list_item">
+					<label for="password" class="modal-label">Пароль:</label>
+					<input type="password" class="goodplace-input modal-input" name="password">
+					<div class="modal-tip-bottom">
+						<a href="#">Забыли пароль?</a>
+					</div>
+				<li class="modal-list_item">
+					<input type="submit" class="goodspace-submit modal-submit" value="Войти">
+			</ul>
+		</form>
+		
+	</div>
+</aside>  		
+ 	<header class="l-header">
+      	<div class="l-restrictor l-restrictor__header">
+        	<div class="header-logo">
+        		<a href="/places/"><img src="{{ STATIC_URL }}img/header-logo.jpg" alt="good place"></a>
+        	</div>
+          <div class="header-description">На этом сайте вы сможете найти жилье для аренды на территории <strong>АР Крым</strong></div>
+        	<div class="header-newad"><a href="newad.html" class="header-newad_link">Подать объявление</a></div>
+        	<div class="header-login">
+        		<a href="login.html" class="header-login_link">Вход</a>
+        	</div>
+      	</div>
+	</header>
+    <section class="l-section">
+      <div class="l-restrictor">
+        <div class="home-tip">Новое объявление</div>
+        <form action="" class="newad-form">
+          <ul class="newad-list">
+            <li class="newad-list_item">
+              <label class="newad-label" required>Заголовок объявления</label>
+              <div class="newad-content">
+                <input name="propose-name" type="text" class="goodplace-input newad-input" placeholder="Двухкомнатная квартира">
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Фотографии</label>
+              <div class="newad-content">
+                <input name="propose-photo" type="file" class="goodplace-file newad-input-file" >
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Цена</label>
+              <div class="newad-content">
+                <input name="propose-price" type="text" class="goodplace-input newad-price_price" placeholder="1000">
+                <span class="newad-price_postfix">рублей</span>
+                <select name="propose-price-period" id="price-period" class="goodplace-select newad-price_period">
+                  <option value="day">посуточно</option>
+                  <option value="month">помесячно</option>
+                </select>
+              </div>
+            
+            <li class="newad-list_item">
+              <label class="newad-label" required>Имя</label>
+              <div class="newad-content">
+                <input type="text" class="goodplace-input newad-input" name="propose-name" placeholder="Иван">
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Фамилия</label>
+              <div class="newad-content">
+                <input type="text" class="goodplace-input newad-input" name="propose-lastname" placeholder="Иванов">
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label">Отчество</label>
+              <div class="newad-content">
+                <input type="text" class="goodplace-input newad-input" name="propose-patronymic" placeholder="Константинопольский">
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Мейл</label>
+              <div class="newad-content">
+                <input type="email" class="goodplace-input newad-input" name="propose-email" placeholder="yourmail@gmail.com">
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Телефон</label>
+              <div class="newad-content">
+                <input type="tel" class="goodplace-input newad-input" name="propose-phone" placeholder="79781231122">
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label">Дом. телефон</label>
+              <div class="newad-content">
+                <input type="tel" class="goodplace-input newad-input" name="propose-phonehome" placeholder="223311">
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Адрес</label>
+              <div class="newad-content">
+                <select name="newad-city" id="newad-city" class="goodplace-select newad-geo_city">
+                  <option value="" disabled selected>Город</option>
+                  <option value="sev">Севастополь</option>
+                  <option value="evp">Евпатория</option>
+                </select>
+                <input type="text" class="goodplace-input newad-input-siblings" name="propose-street" placeholder="Улица">
+                <input type="text" class="goodplace-input newad-input-siblings" name="propose-home" placeholder="Дом">
+                <input type="text" class="goodplace-input newad-input-siblings" name="propose-place" placeholder="Квартира">
+                <input type="text" class="goodplace-input newad-input-siblings" name="propose-floor" placeholder="Этаж">
+                <input type="text" class="goodplace-input newad-input-siblings" name="propose-floor-count" placeholder="Всего этажей в доме">
+              </div>
+            
+            <li class="newad-list_item">
+              <label class="newad-label" required>Спальных мест</label>
+              <div class="newad-content">
+                <select name="newad-sleepplaces" id="newad-sleepplaces" class="goodplace-select newad-sleepplaces">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Горячая вода</label>
+              <div class="newad-content">
+                <label class="newad-content_label"><input type="radio" name="hot-watter" val="true"> Есть</label>
+                <label class="newad-content_label"><input type="radio" name="hot-watter" val="false"> Нет</label>
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Интернет</label>
+              <div class="newad-content">
+                <label class="newad-content_label"><input type="radio" name="internet" val="true"> Есть</label>
+                <label class="newad-content_label"><input type="radio" name="internet" val="false"> Нет</label>
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Стиральная машинка</label>
+              <div class="newad-content">
+                <label class="newad-content_label"><input type="radio" name="wash-mashine" val="true"> Есть</label>
+                <label class="newad-content_label"><input type="radio" name="wash-mashine" val="false"> Нет</label>
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>СВЧ печь</label>
+              <div class="newad-content">
+                <label class="newad-content_label"><input type="radio" name="microvave" val="true"> Есть</label>
+                <label class="newad-content_label"><input type="radio" name="microvave" val="false"> Нет</label>
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Постельное белье</label>
+              <div class="newad-content">
+                <label class="newad-content_label"><input type="radio" name="linens" val="true"> Есть</label>
+                <label class="newad-content_label"><input type="radio" name="linens" val="false"> Нет</label>
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Мебель</label>
+              <div class="newad-content">
+                <label class="newad-content_label"><input type="radio" name="furniture" val="true"> С мебелью</label>
+                <label class="newad-content_label"><input type="radio" name="furniture" val="false"> Без мебели</label>
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Посуда</label>
+              <div class="newad-content">
+                <label class="newad-content_label"><input type="radio" name="utensils" val="true"> С посудой</label>
+                <label class="newad-content_label"><input type="radio" name="utensils" val="false"> Без посуды</label>
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Дети</label>
+              <div class="newad-content">
+                <label class="newad-content_label"><input type="radio" name="childrens" val="true"> Можно</label>
+                <label class="newad-content_label"><input type="radio" name="childrens" val="false"> Нельзя</label>
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label" required>Домашние животные</label>
+              <div class="newad-content">
+                <label class="newad-content_label"><input type="radio" name="pets" val="true"> Можно</label>
+                <label class="newad-content_label"><input type="radio" name="pets" val="false"> Нельзя</label>
+              </div>
+
+            <li class="newad-list_item">
+              <label class="newad-label">Дополнительная информация</label>
+              <div class="newad-content">
+                <textarea class="goodplace-textarea newad-input-textarea" name="propose-additional-info" id="propose-additional-info" placeholder="Введите любую дополнительную информацию"></textarea>
+              </div>
+
+            <li class="newad-list_item">
+              <input type="submit" class="goodspace-submit newad-submit" value="Опубликовать объявление">   
+          </ul>
+         </form>
+       
+      </div>
+    </section>
+    
+
+ 
+	<footer class="l-footer">
+		<div class="l-restrictor">
+			<div><a href="email:psr1919plus21@gmail.com" class="footer-author">psr1919plus21@gmail.com</a></div>
+			<div class="footer-year">2015</div>	
+		</div>
+	</footer>
+	<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+	<script src="{{ STATIC_URL }}js/jquery.js"></script>
+	<script src="{{ STATIC_URL }}js/goodspace.handler.js"></script>
+	<script type="text/javascript">
+		
+		$.get( "http://geocode-maps.yandex.ru/1.x/?geocode=Евпатория+Полупанова+40", function( data ) {
+			mapCenter = $(data).find("pos")[0].textContent.split(" ");
+			console.log($(data));
+			
+			var myMap;
+		 	ymaps.ready(init); // Ожидание загрузки API с сервера Яндекса
+		 	
+		  	function init () {
+		  		console.log(mapCenter);
+		    	myMap = new ymaps.Map("map", {
+			      center: mapCenter.reverse(), // Координаты центра карты
+			      zoom:16 // Zoom
+		    	});
+		  	}
+		});
+
+	  
+	</script>
+ </body>
+</html> 

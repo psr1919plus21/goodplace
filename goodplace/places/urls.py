@@ -7,5 +7,7 @@ urlpatterns = [
     
     url(r'^propose/(?P<prop_id>[0-9]+)/$', views.propose, name='propose'),
 
-    url(r'^proplist/$', views.proplist, name='proplist')
+    url(r'^proplist/$', views.proplist, name='proplist'),
+
+    url(r'^newad/$', views.newad, name='newad')
 ]
