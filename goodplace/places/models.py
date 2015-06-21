@@ -43,7 +43,7 @@ class Photos(models.Model):
 	photoprop = models.ForeignKey(Props)
 	props_photourl = models.CharField(default="/static/img/photoplace/default.jpg", max_length=200)
 
-PropsForm = modelform_factory(Props, fields=('props_title', 'props_city', 'props_street', 'props_home', 'props_place', 'props_sleepplace', 'props_rating', 'props_state', 'props_price', 'props_postfix', 'props_authorname', 'props_authorlastname', 'props_authorpatronymic', 'props_authorphone', 'props_howater', 'props_internet', 'props_washmachine', 'props_furniture', 'props_linens', 'props_utensils', 'props_microwave', 'props_kids', 'props_pets', 'props_addinfo', 'pub_date'))
+PropsForm = modelform_factory(Props, fields=('props_title', 'props_city'))
 
 # class PropsForm(ModelForm):
 #     class Meta:

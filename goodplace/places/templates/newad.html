@@ -60,13 +60,18 @@
 	</header>
     <section class="l-section">
       <div class="l-restrictor">
-        <div class="home-tip">Новое объявление</div>
-        <form action="" class="newad-form">
+        <div class="home-tip">Новое объявленddие</div>
+        <form method="POST" action="" class="newad-form">
+          {% csrf_token %} 
+          <!-- {% for form in formset %}
+              {{form}}
+          {% endfor %} -->
+          <input id="id_pub_date" name="pub_date" type="hidden" value="{{ today }}">
           <ul class="newad-list">
             <li class="newad-list_item">
-              <label class="newad-label" required>Заголовок объявления</label>
+              <label  class="newad-label" required>Заголовок объявления</label>
               <div class="newad-content">
-                <input name="propose-name" type="text" class="goodplace-input newad-input" placeholder="Двухкомнатная квартира">
+                <input id="id_props_title" name="props_title" type="text" class="goodplace-input newad-input" placeholder="Двухкомнатная квартира">
               </div>
 
             <li class="newad-list_item">
@@ -81,19 +86,19 @@
                 <input name="propose-price" type="text" class="goodplace-input newad-price_price" placeholder="1000">
                 <span class="newad-price_postfix">рублей</span>
                 <select name="propose-price-period" id="price-period" class="goodplace-select newad-price_period">
-                  <option value="day">посуточно</option>
-                  <option value="month">помесячно</option>
+                  <option value="сут.">посуточно</option>
+                  <option value="мес.">помесячно</option>
                 </select>
               </div>
             
             <li class="newad-list_item">
-              <label class="newad-label" required>Имя</label>
+              <label class="newad-label"  required>Имя</label>
               <div class="newad-content">
-                <input type="text" class="goodplace-input newad-input" name="propose-name" placeholder="Иван">
+                <input type="text" class="goodplace-input newad-input"  placeholder="Иван">
               </div>
 
             <li class="newad-list_item">
-              <label class="newad-label" required>Фамилия</label>
+              <label class="newad-label"  required>Фамилия</label>
               <div class="newad-content">
                 <input type="text" class="goodplace-input newad-input" name="propose-lastname" placeholder="Иванов">
               </div>
@@ -125,10 +130,10 @@
             <li class="newad-list_item">
               <label class="newad-label" required>Адрес</label>
               <div class="newad-content">
-                <select name="newad-city" id="newad-city" class="goodplace-select newad-geo_city">
+                <select name="props_city" id="id_props_city" class="goodplace-select newad-geo_city">
                   <option value="" disabled selected>Город</option>
-                  <option value="sev">Севастополь</option>
-                  <option value="evp">Евпатория</option>
+                  <option value="Севастополь">Севастополь</option>
+                  <option value="Евпатория">Евпатория</option>
                 </select>
                 <input type="text" class="goodplace-input newad-input-siblings" name="propose-street" placeholder="Улица">
                 <input type="text" class="goodplace-input newad-input-siblings" name="propose-home" placeholder="Дом">
@@ -225,7 +230,7 @@
 
             <li class="newad-list_item">
               <input type="submit" class="goodspace-submit newad-submit" value="Опубликовать объявление">   
-          </ul>
+          </ul>  
          </form>
        
       </div>

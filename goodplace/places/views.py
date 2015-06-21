@@ -1,5 +1,8 @@
+from django.forms.models import modelform_factory
+from django.shortcuts import render_to_response 
 from django.http import HttpResponse
 from django.template import RequestContext, loader
+import datetime
 from .models import  Props, Photos
 
 def index(request):
@@ -29,12 +32,19 @@ def proplist(request):
     return HttpResponse(template.render(context))
 
 def newad(request):
-    propsFormSet = modelform_factory(Props, fields=('props_title', 'props_city', 'props_street', 'props_home', 'props_place', 'props_sleepplace', 'props_rating', 'props_state', 'props_price', 'props_postfix', 'props_authorname', 'props_authorlastname', 'props_authorpatronymic', 'props_authorphone', 'props_howater', 'props_internet', 'props_washmachine', 'props_furniture', 'props_linens', 'props_utensils', 'props_microwave', 'props_kids', 'props_pets', 'props_addinfo', 'pub_date'))
+    propsFormSet = modelform_factory(Props, fields=('props_title', 'props_city', "pub_date"))
     template = loader.get_template('newad.html')
     if request.method == 'POST':
-        formset = propsFormSet(request.POST, request.FILES)
-        formset.save()
-
+        formset = propsFormSet(request.POST)
+        print formset.is_valid()
+        today = datetime.date.today().isoformat()
+        if formset.is_valid():
+            formset.save()
+    else:
+        formset = propsFormSet()
     return render_to_response("newad.html", {
         "formset": formset,
-    })
+        "today": today
+    },
+        RequestContext(request)
+    )
